@@ -46,6 +46,17 @@ const apps = [
     color: '#FFF1F2',
     url: 'https://daily-roadmap-todos-d92u.vercel.app/',
   },
+  {
+    id: 9,
+    emoji: '🎫',
+    title: '표나바다',
+    year: '2026',
+    category: 'life',
+    description: '기차 취소표를 패스로 교환하는 카르마 기반 양도 플랫폼 · 수수료 없이 취소표를 주고받아요',
+    tags: ['React', 'Firebase', 'Vercel'],
+    color: '#EEF2FF',
+    url: 'https://pyo-nabada.vercel.app/',
+  },
   // 업무 생산성 (2026 먼저)
   {
     id: 5,
