@@ -192,7 +192,7 @@ export default function App() {
   const filtered = active === 'all' ? apps : apps.filter(a => a.category === active)
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] font-sans">
+    <div className="min-h-screen bg-[#FAFAF8]" style={{ fontFamily: "'Pretendard', sans-serif" }}>
 
       {/* header */}
       <header className="max-w-3xl mx-auto px-6 pt-20 pb-14 text-center">
@@ -200,11 +200,11 @@ export default function App() {
           🧪 AI 바이브코딩 실험실
         </div>
 
-        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 tracking-tight mb-4">
+        <h1 className="text-5xl sm:text-6xl text-gray-900 tracking-tight mb-4" style={{ fontFamily: "'AnsangsuBold', sans-serif" }}>
           minjaja_lab
         </h1>
 
-        <p className="text-gray-500 text-base sm:text-lg mb-10 leading-relaxed">
+        <p className="text-base sm:text-lg mb-10 leading-relaxed" style={{ fontFamily: "'AnsangsuBold', sans-serif", color: '#B0B8C5' }}>
           일과 일상을 더 편하게 만들기 위해<br />
           AI와 함께 만들고 실험한 것들
         </p>
@@ -243,6 +243,7 @@ export default function App() {
           <button
             key={f.id}
             onClick={() => setActive(f.id)}
+            style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
             className={`text-sm px-4 py-2 rounded-full font-medium transition-all flex items-center gap-1.5 ${
               active === f.id
                 ? 'bg-indigo-600 text-white shadow-sm'
