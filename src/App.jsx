@@ -22,6 +22,12 @@ const apps = [
     tags: ['Python', 'Playwright', 'watchdog'],
     color: '#EFF6FF',
     url: null,
+    flow: [
+      { icon: '📁', label: 'Downloads\n폴더' },
+      { icon: '👁️', label: '파일 감지\nwatchdog' },
+      { icon: '🌐', label: '브라우저\n자동화' },
+      { icon: '☁️', label: 'MyBox\n업로드' },
+    ],
   },
   {
     id: 5,
@@ -137,7 +143,25 @@ function AppCard({ app }) {
         className="h-36 flex items-center justify-center text-5xl select-none relative"
         style={{ backgroundColor: app.color }}
       >
-        {app.emoji}
+        {app.flow ? (
+          <div className="flex items-center gap-1 px-3">
+            {app.flow.map((step, i) => (
+              <div key={i} className="flex items-center gap-1">
+                <div className="flex flex-col items-center gap-0.5">
+                  <span className="text-xl">{step.icon}</span>
+                  <span className="text-[8px] text-gray-500 font-medium text-center whitespace-pre-line leading-tight">
+                    {step.label}
+                  </span>
+                </div>
+                {i < app.flow.length - 1 && (
+                  <span className="text-gray-300 text-xs mb-3">→</span>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          app.emoji
+        )}
         {isSheet && (
           <span className="absolute top-3 right-3 text-[10px] font-medium bg-white/80 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
             스프레드시트
