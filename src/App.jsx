@@ -7,10 +7,21 @@ const apps = [
     title: '표나바다',
     year: '2026.04',
     category: 'life',
-    description: '기차 취소표를 패스로 교환하는 카르마 기반 양도 플랫폼 · 수수료 없이 취소표를 주고받아요',
+    description: '취소할 기차표를 양도하고,다음에 쓸 수 있는 패스로 교환하는 플랫폼. 우리 기차 편하게 타요.',
     tags: ['React', 'Firebase', 'Vercel'],
     color: '#EEF2FF',
     url: 'https://pyo-nabada.vercel.app/',
+  },
+  {
+    id: 10,
+    emoji: '☁️',
+    title: '영상 클라우드 자동 업로드 시스템',
+    year: '2026.04',
+    category: 'work',
+    description: '로컬에 저장된 영상 파일을 실시간으로 감지해 팀 공유 클라우드에 자동 업로드하는 무인 자동화 시스템',
+    tags: ['Python', 'Playwright', 'watchdog'],
+    color: '#EFF6FF',
+    url: null,
   },
   {
     id: 5,
@@ -166,21 +177,27 @@ function AppCard({ app }) {
         </div>
 
         {/* link */}
-        <a
-          href={app.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`inline-flex items-center gap-1 text-xs font-medium transition-colors mt-1 ${
-            isSheet
-              ? 'text-emerald-600 hover:text-emerald-900'
-              : 'text-indigo-600 hover:text-indigo-900'
-          }`}
-        >
-          {isSheet ? '시트 열기' : '열어보기'}
-          <span className="group-hover:translate-x-0.5 transition-transform inline-block">
-            →
+        {app.url ? (
+          <a
+            href={app.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-1 text-xs font-medium transition-colors mt-1 ${
+              isSheet
+                ? 'text-emerald-600 hover:text-emerald-900'
+                : 'text-indigo-600 hover:text-indigo-900'
+            }`}
+          >
+            {isSheet ? '시트 열기' : '열어보기'}
+            <span className="group-hover:translate-x-0.5 transition-transform inline-block">
+              →
+            </span>
+          </a>
+        ) : (
+          <span className="inline-flex items-center gap-1 text-xs font-medium text-gray-400 mt-1">
+            로컬 실행
           </span>
-        </a>
+        )}
       </div>
     </div>
   )
