@@ -2,6 +2,17 @@ import { useState } from 'react'
 
 const apps = [
   {
+    id: 11,
+    emoji: '🗺️',
+    title: '트렌디 푸드맵',
+    year: '2026.04',
+    category: 'life',
+    description: '네이버 DataLab 트렌드 분석으로 지금 뜨는 음식을 발굴하고, GPS 기반으로 주변 매장을 실시간 탐색하는 큐레이션 지도 앱',
+    tags: ['React', 'Naver DataLab API', 'Google Sheets', 'Vercel'],
+    color: '#F2F7F8',
+    url: 'https://trendy-foodmap.vercel.app/',
+  },
+  {
     id: 9,
     emoji: '🎫',
     title: '표나바다',
