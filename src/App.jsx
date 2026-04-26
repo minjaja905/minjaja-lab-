@@ -8,6 +8,7 @@ const apps = [
     year: '2026.04',
     category: 'life',
     description: '네이버 DataLab 트렌드 분석으로 지금 뜨는 음식을 발굴하고, GPS 기반으로 주변 매장을 실시간 탐색하는 큐레이션 지도 앱',
+    log: '뭐 먹을지 고민하다가 만들어봤는데 오히려 더 많이 찾아보게 됨 ㅋ',
     tags: ['React', 'Naver DataLab API', 'Google Sheets', 'Vercel'],
     color: '#F2F7F8',
     url: 'https://trendy-foodmap.vercel.app/',
@@ -18,7 +19,8 @@ const apps = [
     title: '표나바다',
     year: '2026.04',
     category: 'life',
-    description: '취소할 기차표를 양도하고,다음에 쓸 수 있는 패스로 교환하는 플랫폼. 우리 기차 편하게 타요.',
+    description: '취소할 기차표를 양도하고, 다음에 쓸 수 있는 패스로 교환하는 플랫폼. 우리 기차 편하게 타요.',
+    log: '기차표 바꾸기가 너무 불편해서 이번 달에 뚝딱 만들어봤다',
     tags: ['React', 'Firebase', 'Vercel'],
     color: '#EEF2FF',
     url: 'https://pyo-nabada.vercel.app/',
@@ -30,6 +32,7 @@ const apps = [
     year: '2026.04',
     category: 'work',
     description: '로컬에 저장된 영상 파일을 실시간으로 감지해 팀 공유 클라우드에 자동 업로드하는 무인 자동화 시스템',
+    log: '매번 수동으로 올리는 게 너무 귀찮아서 아예 자동으로 만들어버렸다',
     tags: ['Python', 'Playwright', 'watchdog'],
     color: '#EFF6FF',
     url: null,
@@ -47,6 +50,7 @@ const apps = [
     year: '2026.04',
     category: 'work',
     description: '매일 수신하는 대용량 첨부파일을 정규식으로 파싱해 기자실에 자동 전달하는 자동화 시스템',
+    log: '하루에 수십 통씩 오는 이메일을 손으로 전달하다 지쳐서 만든 것',
     tags: ['Google Apps Script', 'Gmail API', 'Google Sheets'],
     color: '#FFFBEB',
     url: 'https://script.google.com/macros/s/AKfycbzPIMT833V8qo_eah5FMIiEkXQBHCCohwCNBrnqw2TG-6nIlzlF5zmgBaE8ndKB9Ahv/exec',
@@ -58,6 +62,7 @@ const apps = [
     year: '2026.04',
     category: 'life',
     description: '반려묘 퍼스널컬러 브랜딩 + RSVP 자동화, 풀스택 바이브코딩으로 기성 플랫폼 이상의 UI 구현',
+    log: '친구 청첩장 만들어줬는데 기성 플랫폼보다 낫다고 다들 놀람',
     tags: ['Lovable', 'v0.dev', 'Claude', 'Supabase'],
     color: '#FFF7ED',
     url: 'https://wedding-invitation-mj.vercel.app/',
@@ -69,6 +74,7 @@ const apps = [
     year: '2026.03',
     category: 'life',
     description: 'SNS 유행 펀칭 효과를 커스텀하고 고해상도로 저장할 수 있는 모바일 최적화 웹 툴',
+    log: 'SNS에서 유행하는 거 보고 당장 만들어보고 싶어서',
     tags: ['React', 'Canvas API', 'Vercel'],
     color: '#F0FDF4',
     url: 'https://punching-image-maker-mj.vercel.app/',
@@ -80,9 +86,23 @@ const apps = [
     year: '2026.02',
     category: 'life',
     description: '밈 및 카드뉴스 제작을 위한 React 기반 웹 앱 · 이미지 배경 제거 및 압축 파일 처리 기능 포함',
+    log: '밈 하나 만들 때마다 포토샵 켜는 게 피곤해서 만든 업무 도구',
     tags: ['React', 'Claude Code', 'Vercel'],
     color: '#F5F3FF',
     url: 'https://cardnews-app-pi.vercel.app/',
+  },
+  {
+    id: 12,
+    emoji: '📺',
+    title: '유튜브 채널 편성표',
+    year: '2025.12',
+    category: 'work',
+    format: 'notion',
+    description: 'Notion 데이터베이스로 유튜브 채널의 월간 콘텐츠 편성을 기획하고 실시간으로 팀과 공유하는 콘텐츠 스케줄링 시스템',
+    log: '팀 전체가 같은 편성표 보려고 구축한 노션 시스템',
+    tags: ['Notion', 'YouTube', 'Database'],
+    color: '#F5F0FF',
+    url: null,
   },
   {
     id: 1,
@@ -91,6 +111,7 @@ const apps = [
     year: '2025.12',
     category: 'life',
     description: '구글 Gemini로 나만의 업무 루틴에 최적화된 일정 관리 웹 앱 직접 개발 및 배포',
+    log: '시중 앱이 내 루틴에 안 맞아서 그냥 직접 만들어버렸다',
     tags: ['Gemini', 'Google Sheets', 'Vercel'],
     color: '#FFF1F2',
     url: 'https://daily-roadmap-todos-d92u.vercel.app/',
@@ -103,6 +124,7 @@ const apps = [
     category: 'work',
     format: 'sheet',
     description: '영상 제작 요청·진행률 실시간 트래킹 및 SUMPRODUCT 기반 월간 성과 자동 집계 시스템',
+    log: '영상이 몇 편인지 헷갈려서 만든 집계 시트',
     tags: ['Google Apps Script', 'Google Sheets'],
     color: '#ECFDF5',
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVH9KmqZJASA-8X5Wn96xsiej5Dfa8fmiREQjtp0Jo6ITB69YxepTB5E9PduXyr2kdlRqtlEphTXrg/pubhtml',
@@ -115,6 +137,7 @@ const apps = [
     category: 'work',
     format: 'sheet',
     description: '실시간 API 연동으로 거시경제 지표와 개인 자산을 한눈에 보는 올인원 트래킹 시트',
+    log: '매달 환율이랑 지표 찾아보기 귀찮아서 한 페이지로 모았다',
     tags: ['Google Sheets', 'API 연동'],
     color: '#EFF6FF',
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRxq-mX6ACRv7pWKgkqThk_6VAHuoknBBS-J_7LgyQwk1hO4ocWaEg1I1bztW2gcBb0MF2hQbxv__mp/pubhtml',
@@ -127,6 +150,7 @@ const apps = [
     category: 'work',
     format: 'sheet',
     description: '실시간 환율 연동 + 동행자 실시간 협업을 위해 설계된 올인원 여행 관리 솔루션',
+    log: '여행 계획 혼자 짜기 지쳐서 동행자랑 같이 쓸 수 있게 만든 것',
     tags: ['Google Sheets', '실시간 환율 API'],
     color: '#F0F9FF',
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcCdXDdM6t1_uv9gqKfRJWzOSeY6MmIAbS1Ok6UegO8ci9ruHhPNPwsj6CBLGmgo0QGmiS246wMXMs/pubhtml',
@@ -134,197 +158,225 @@ const apps = [
 ]
 
 const FILTERS = [
-  { id: 'all', label: '전체', count: apps.length },
-  { id: 'life', label: '🏠 생활 생산성', count: apps.filter(a => a.category === 'life').length },
-  { id: 'work', label: '💼 업무 생산성', count: apps.filter(a => a.category === 'work').length },
+  { id: 'all', label: '전체' },
+  { id: 'life', label: '생활' },
+  { id: 'work', label: '업무' },
 ]
 
-function AppCard({ app }) {
+function groupByPeriod(list) {
+  const map = {}
+  list.forEach(app => {
+    if (!map[app.year]) map[app.year] = []
+    map[app.year].push(app)
+  })
+  return Object.entries(map).sort(([a], [b]) => b.localeCompare(a))
+}
+
+function LogCard({ app }) {
   const isSheet = app.format === 'sheet'
+  const isNotion = app.format === 'notion'
+  const catLabel = app.category === 'life' ? 'Life' : 'Work'
+  const catColor = app.category === 'life' ? 'text-indigo-400' : 'text-amber-500'
+
+  const tagStyle = isSheet
+    ? 'bg-emerald-50 text-emerald-700'
+    : isNotion
+    ? 'bg-violet-50 text-violet-700'
+    : 'bg-gray-100 text-gray-500'
+
+  const formatBadge = isSheet ? (
+    <span className="text-[11px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">스프레드시트</span>
+  ) : isNotion ? (
+    <span className="text-[11px] font-medium text-violet-600 bg-violet-50 px-2 py-0.5 rounded-full">Notion</span>
+  ) : null
+
+  const linkLabel = isSheet ? '시트 열기' : isNotion ? '노션 열기' : '열어보기'
+  const linkColor = isSheet
+    ? 'text-emerald-600 hover:text-emerald-800'
+    : isNotion
+    ? 'text-violet-600 hover:text-violet-800'
+    : 'text-gray-700 hover:text-indigo-600'
 
   return (
-    <div className={`group bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col
-      ${isSheet
-        ? 'border border-dashed border-emerald-200 hover:shadow-lg hover:shadow-emerald-100/60'
-        : 'border border-gray-100 hover:shadow-lg hover:shadow-gray-200/60'
-      }`}
-    >
-      {/* thumbnail */}
+    <div className="group">
+      {/* Thumbnail */}
       <div
-        className="h-36 flex items-center justify-center text-5xl select-none relative"
+        className="rounded-2xl h-52 flex items-center justify-center select-none mb-4 overflow-hidden"
         style={{ backgroundColor: app.color }}
       >
         {app.flow ? (
-          <div className="flex items-center gap-1 px-3">
+          <div className="flex items-center gap-2 px-6">
             {app.flow.map((step, i) => (
-              <div key={i} className="flex items-center gap-1">
-                <div className="flex flex-col items-center gap-0.5">
-                  <span className="text-xl">{step.icon}</span>
-                  <span className="text-[8px] text-gray-500 font-medium text-center whitespace-pre-line leading-tight">
+              <div key={i} className="flex items-center gap-2">
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-2xl">{step.icon}</span>
+                  <span className="text-[10px] text-gray-500 text-center whitespace-pre-line leading-tight">
                     {step.label}
                   </span>
                 </div>
                 {i < app.flow.length - 1 && (
-                  <span className="text-gray-300 text-xs mb-3">→</span>
+                  <span className="text-gray-300 text-sm mb-4">→</span>
                 )}
               </div>
             ))}
           </div>
         ) : (
-          app.emoji
-        )}
-        {isSheet && (
-          <span className="absolute top-3 right-3 text-[10px] font-medium bg-white/80 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
-            스프레드시트
-          </span>
+          <span className="text-6xl">{app.emoji}</span>
         )}
       </div>
 
-      {/* body */}
-      <div className="p-5 flex flex-col flex-1 gap-3">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-sm font-semibold text-gray-900 leading-snug">
-            {app.title}
-          </h3>
-          <span className="shrink-0 text-[11px] text-gray-400 font-mono bg-gray-50 px-2 py-0.5 rounded-full border border-gray-100">
-            {app.year}
-          </span>
-        </div>
-
-        <p className="text-xs text-gray-500 leading-relaxed flex-1">
-          {app.description}
-        </p>
-
-        {/* tech tags */}
-        <div className="flex flex-wrap gap-1.5">
-          {app.tags.map((tag) => (
-            <span
-              key={tag}
-              className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                isSheet
-                  ? 'bg-emerald-50 text-emerald-600'
-                  : 'bg-indigo-50 text-indigo-600'
-              }`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* link */}
-        {app.url ? (
-          <a
-            href={app.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-1 text-xs font-medium transition-colors mt-1 ${
-              isSheet
-                ? 'text-emerald-600 hover:text-emerald-900'
-                : 'text-indigo-600 hover:text-indigo-900'
-            }`}
-          >
-            {isSheet ? '시트 열기' : '열어보기'}
-            <span className="group-hover:translate-x-0.5 transition-transform inline-block">
-              →
-            </span>
-          </a>
-        ) : (
-          <span className="inline-flex items-center gap-1 text-xs font-medium text-gray-400 mt-1">
-            로컬 실행
-          </span>
-        )}
+      {/* Category + format */}
+      <div className="flex items-center gap-2 mb-2">
+        <span className={`text-[11px] font-semibold uppercase tracking-wide ${catColor}`}>{catLabel}</span>
+        {formatBadge}
       </div>
+
+      {/* Title */}
+      <h3 className="font-bold text-gray-900 text-[17px] leading-snug mb-2">{app.title}</h3>
+
+      {/* Description */}
+      <p className="text-sm text-gray-500 leading-relaxed mb-3">{app.description}</p>
+
+      {/* Log comment */}
+      {app.log && (
+        <p className="text-sm text-gray-400 italic mb-4">"{app.log}"</p>
+      )}
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-1.5 mb-4">
+        {app.tags.map(tag => (
+          <span key={tag} className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${tagStyle}`}>
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {/* Link */}
+      {app.url ? (
+        <a
+          href={app.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center gap-1 text-[13px] font-medium transition-colors ${linkColor}`}
+        >
+          {linkLabel}
+          <span className="group-hover:translate-x-0.5 transition-transform inline-block">→</span>
+        </a>
+      ) : (
+        <span className="text-[13px] text-gray-300">
+          {app.format === 'notion' ? '내부 운영' : '로컬 실행'}
+        </span>
+      )}
     </div>
   )
 }
 
 export default function App() {
   const [active, setActive] = useState('all')
-
   const filtered = active === 'all' ? apps : apps.filter(a => a.category === active)
+  const grouped = groupByPeriod(filtered)
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+    <div className="min-h-screen bg-[#F9F8F5]" style={{ fontFamily: "'Pretendard', sans-serif" }}>
 
-      {/* header */}
-      <header className="max-w-3xl mx-auto px-6 pt-20 pb-14 text-center">
-        <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-500 bg-indigo-50 px-3 py-1.5 rounded-full mb-8 border border-indigo-100">
-          🧪 AI 바이브코딩 실험실
+      {/* Header */}
+      <header className="max-w-xl mx-auto px-6 pt-14 pb-10">
+        <div className="flex items-center justify-between pb-4 border-b-2 border-gray-900 mb-8">
+          <span className="text-xs font-mono tracking-wide text-gray-600 uppercase">
+            Issue No.{apps.length} · 2026
+          </span>
+          <span className="text-xs font-mono tracking-wide text-gray-500 uppercase">
+            AI Vibe Coding Lab
+          </span>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl text-gray-900 tracking-tight mb-4" style={{ fontFamily: "'AnsangsuBold', sans-serif" }}>
-          minjaja_lab
+        <h1
+          className="text-7xl text-gray-900 tracking-tight leading-[0.9] mb-1"
+          style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
+        >
+          minjaja
+        </h1>
+        <h1
+          className="text-7xl text-gray-900 tracking-tight leading-[0.9] mb-6"
+          style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
+        >
+          _lab
         </h1>
 
-        <p className="text-base sm:text-lg mb-10 leading-relaxed" style={{ fontFamily: "'AnsangsuBold', sans-serif", color: '#B0B8C5' }}>
+        <p
+          className="text-sm text-gray-600 leading-relaxed mb-4"
+          style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
+        >
           일과 일상을 더 편하게 만들기 위해<br />
           AI와 함께 만들고 실험한 것들
         </p>
 
-        <div className="flex items-center justify-center gap-3 flex-wrap">
+        <div className="flex gap-4">
           <a
             href="https://www.instagram.com/minjaja.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-white px-5 py-2.5 rounded-full font-medium transition-opacity hover:opacity-80"
-            style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
+            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @minjaja.pdf
+            ↗ @minjaja.pdf
           </a>
           <a
             href="https://www.instagram.com/min_jaja_"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-white px-5 py-2.5 rounded-full font-medium transition-opacity hover:opacity-80"
-            style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
+            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @min_jaja_
+            ↗ @min_jaja_
           </a>
         </div>
       </header>
 
-      {/* filter */}
-      <div className="flex justify-center gap-2 px-6 mb-10 flex-wrap">
-        {FILTERS.map(f => (
-          <button
-            key={f.id}
-            onClick={() => setActive(f.id)}
-            style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
-            className={`text-sm px-4 py-2 rounded-full font-medium transition-all flex items-center gap-1.5 ${
-              active === f.id
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'bg-white border border-gray-200 text-gray-600 hover:border-indigo-200 hover:text-indigo-600'
-            }`}
-          >
-            {f.label}
-            <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-mono ${
-              active === f.id
-                ? 'bg-indigo-500 text-white'
-                : 'bg-gray-100 text-gray-400'
-            }`}>
-              {f.count}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      {/* grid */}
-      <main className="max-w-4xl mx-auto px-6 pb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map(app => (
-            <AppCard key={app.id} app={app} />
+      {/* Filter */}
+      <div className="max-w-xl mx-auto px-6 mb-10">
+        <div className="flex gap-6">
+          {FILTERS.map(f => (
+            <button
+              key={f.id}
+              onClick={() => setActive(f.id)}
+              style={{ fontFamily: "'AnsangsuBold', sans-serif" }}
+              className={`text-sm pb-1 border-b-2 transition-all ${
+                active === f.id
+                  ? 'border-gray-900 text-gray-900'
+                  : 'border-transparent text-gray-400 hover:text-gray-700'
+              }`}
+            >
+              {f.label}
+            </button>
           ))}
         </div>
+      </div>
 
-        <p className="text-center text-xs text-gray-400 mt-16 font-mono">
-          계속 실험 중 🧪 · minjaja_lab © 2026
-        </p>
+      {/* Timeline feed */}
+      <main className="max-w-xl mx-auto px-6 pb-24">
+        {grouped.map(([period, items]) => (
+          <div key={period} className="mb-16">
+
+            {/* Period marker */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-2 h-2 rounded-full bg-gray-800 flex-shrink-0" />
+              <span className="text-xs font-mono text-gray-600 tracking-widest">{period}</span>
+              <div className="flex-1 h-px bg-gray-200" />
+            </div>
+
+            {/* Cards under timeline line */}
+            <div className="pl-5 border-l border-gray-200 space-y-12">
+              {items.map(app => (
+                <LogCard key={app.id} app={app} />
+              ))}
+            </div>
+
+          </div>
+        ))}
+
+        <footer className="pt-5 border-t border-gray-200 flex items-center justify-between">
+          <p className="text-xs text-gray-400 font-mono">계속 실험 중 · minjaja_lab © 2026</p>
+          <p className="text-xs text-gray-400 font-mono">🧪</p>
+        </footer>
       </main>
     </div>
   )
