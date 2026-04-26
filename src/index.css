@@ -7,9 +7,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'EFJejudoldam';
+  src: url('/fonts/EF_jejudoldam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GriunMongtori';
+  src: url('/fonts/Griun_Mongtori-Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes flowPulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.95); }
+  25%       { opacity: 1;    transform: scale(1.08); }
+  50%, 75%  { opacity: 0.25; transform: scale(0.95); }
+}
+
+@keyframes flowArrow {
+  0%, 100%  { opacity: 0.1; }
+  37.5%     { opacity: 0.8; }
+}
 
 * {
   box-sizing: border-box;
