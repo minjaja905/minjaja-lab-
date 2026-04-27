@@ -444,7 +444,7 @@ export default function App() {
         ))}
 
         <footer className="pt-5 border-t border-gray-200 flex items-center justify-between">
-          <p className="text-xs text-gray-400 font-mono">계속 실험 중 · minjaja_lab © 2026</p>
+          <p className="text-xs text-gray-400 font-mono">계속 실험 중 · © 2026 MJ</p>
           <p className="text-xs text-gray-400 font-mono">🧪</p>
         </footer>
       </main>
