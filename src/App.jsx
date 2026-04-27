@@ -2,6 +2,19 @@ import { useState } from 'react'
 
 const apps = [
   {
+    id: 13,
+    emoji: '🎬',
+    title: '개인 유튜브 운영 컨설팅',
+    year: '2026.05',
+    category: 'life',
+    video: '/screenshots/13.mov',
+    description: 'YouTube 채널 데이터를 CSV로 업로드하면 KPI 대시보드를 자동 생성하고, Gemini AI가 콘텐츠 전략을 1:1 컨설팅해주는 개인 맞춤형 채널 운영 도구',
+    log: '내 채널 데이터 넣으면 AI가 컨설턴트가 되어주는 것',
+    tags: ['React', 'Gemini API', 'PapaParse', 'Vercel'],
+    color: '#ECFDF8',
+    url: 'https://mj-youtube-consulting-minday.vercel.app/',
+  },
+  {
     id: 11,
     emoji: '🗺️',
     title: '트렌디 푸드맵',
