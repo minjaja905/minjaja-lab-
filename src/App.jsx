@@ -1,6 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const apps = [
+  {
+    id: 15,
+    emoji: '📡',
+    title: 'SNS 성과 자동 수집 시스템',
+    year: '2026.05',
+    category: 'work',
+    animation: 'terminal',
+    description: 'YouTube·Instagram·Notion 3개 API를 연동해 회사·개인 이중 채널의 SNS 성과 지표를 자동 수집하는 무인 자동화 시스템. 주간 수동 입력 업무를 완전 제거.',
+    log: '3개 API, 2개 채널 — 매주 손으로 하던 지표 입력, 전부 없애버림',
+    tags: ['Python', 'YouTube API', 'Instagram Graph API', 'Notion API'],
+    color: '#F0FDF4',
+    url: 'https://github.com/minjaja905/notion-sns-sync-personal',
+    terminalLines: [
+      '[ YouTube API ]  @brand 채널 수집',
+      '  ✓ EP.147  조회수 24,103',
+      '[ Instagram API ]  @brand 수집',
+      '  ✓ 릴스  좋아요 1,847',
+      '[ Instagram API ]  @minjaja.pdf 수집',
+      '  ✓ 릴스  좋아요 341',
+      '[ Notion API ]  DB 업데이트',
+      '  ✓ 4 pages synced ✓',
+    ],
+  },
   {
     id: 13,
     emoji: '🎬',
@@ -70,25 +93,6 @@ const apps = [
       { icon: '👁️', label: '파일 감지\nwatchdog' },
       { icon: '🌐', label: '브라우저\n자동화' },
       { icon: '☁️', label: 'MyBox\n업로드' },
-    ],
-  },
-  {
-    id: 15,
-    emoji: '📡',
-    title: 'SNS 성과 자동 수집 시스템',
-    year: '2026.04',
-    category: 'work',
-    animation: 'flow',
-    description: 'Notion 콘텐츠 캘린더에 등록된 URL을 읽어 YouTube·Instagram API에서 성과 지표를 자동 수집하고 매일 DB를 자동 업데이트하는 무인 자동화 시스템. 주간 성과 집계에 걸리던 업무 시간을 확 단축.',
-    log: '매주 조회수·좋아요 손으로 입력하던 업무 시간, 자동화 하나로 확 줄여버림',
-    tags: ['Python', 'YouTube API', 'Instagram Graph API', 'Notion API'],
-    color: '#F0FDF4',
-    url: null,
-    flow: [
-      { icon: '📋', label: 'Notion\n캘린더' },
-      { icon: '🔗', label: 'URL\n추출' },
-      { icon: '📡', label: 'API\n수집' },
-      { icon: '✅', label: 'Notion\n업데이트' },
     ],
   },
   {
@@ -233,11 +237,55 @@ function groupByPeriod(list) {
   return Object.entries(map).sort(([a], [b]) => b.localeCompare(a))
 }
 
+function getTerminalLineColor(line) {
+  if (line.includes('YouTube')) return '#ef4444'
+  if (line.includes('Instagram')) return '#e879f9'
+  if (line.includes('Notion')) return '#60a5fa'
+  if (line.trimStart().startsWith('✓')) return '#4ade80'
+  return '#94a3b8'
+}
+
+function TerminalAnimation({ lines }) {
+  const [visibleCount, setVisibleCount] = useState(0)
+
+  useEffect(() => {
+    if (visibleCount < lines.length) {
+      const delay = lines[visibleCount]?.trimStart().startsWith('✓') ? 400 : 650
+      const t = setTimeout(() => setVisibleCount(v => v + 1), delay)
+      return () => clearTimeout(t)
+    } else {
+      const t = setTimeout(() => setVisibleCount(0), 2200)
+      return () => clearTimeout(t)
+    }
+  }, [visibleCount, lines.length])
+
+  return (
+    <div className="w-full bg-black/80 rounded-xl p-3 backdrop-blur-sm">
+      <div className="flex items-center gap-1.5 mb-2.5">
+        <div className="w-2 h-2 rounded-full" style={{ background: '#ff5f57' }} />
+        <div className="w-2 h-2 rounded-full" style={{ background: '#febc2e' }} />
+        <div className="w-2 h-2 rounded-full" style={{ background: '#28c840' }} />
+      </div>
+      <div className="space-y-1" style={{ fontFamily: 'monospace', fontSize: '10.5px' }}>
+        {lines.slice(0, visibleCount).map((line, i) => (
+          <div key={i} style={{ color: getTerminalLineColor(line) }}>
+            {line}
+          </div>
+        ))}
+        {visibleCount < lines.length && (
+          <span style={{ color: '#4ade80', animation: 'flowPulse 1s ease-in-out infinite' }}>█</span>
+        )}
+      </div>
+    </div>
+  )
+}
+
 function LogCard({ app }) {
   const hasImage = Boolean(app.image)
   const hasVideo = Boolean(app.video)
   const hasFlow = app.animation === 'flow'
-  const hasMedia = hasImage || hasVideo || hasFlow
+  const hasTerminal = app.animation === 'terminal'
+  const hasMedia = hasImage || hasVideo || hasFlow || hasTerminal
   const isSheet = app.format === 'sheet'
   const isNotion = app.format === 'notion'
   const catLabel = app.category === 'life' ? 'Life' : 'Work'
@@ -288,6 +336,13 @@ function LogCard({ app }) {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* 터미널 애니메이션 배경 */}
+      {hasTerminal && app.terminalLines && (
+        <div className="absolute inset-0 flex items-center justify-center px-5">
+          <TerminalAnimation lines={app.terminalLines} />
         </div>
       )}
 
