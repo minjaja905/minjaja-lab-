@@ -4,7 +4,7 @@ const apps = [
   {
     id: 16,
     emoji: '🗞️',
-    title: '아침 스크랩 자동화',
+    title: '여론 동향 파악 자동화',
     year: '2026.05',
     category: 'work',
     animation: 'flow',
