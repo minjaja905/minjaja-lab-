@@ -8,7 +8,7 @@ const apps = [
     year: '2026.05',
     category: 'work',
     animation: 'flow',
-    description: '매일 05:30 자동 실행. 뉴스·SNS·커뮤니티를 수집해 Notion 리포트 생성 후 알림 발송. 민감 날짜 ±2일 감지 및 혐오·정치 표현 75개 자동 스캔으로 콘텐츠 리스크까지 관리.',
+    description: '매일 05:30 자동 실행. 뉴스·SNS·커뮤니티를 수집해 Notion 리포트 생성 후 알림 발송. 민감 날짜 ±2주 감지 및 혐오·정치 표현 221개 자동 스캔으로 콘텐츠 리스크까지 관리.',
     log: '아침 스크랩부터 리스크 체크까지, 홍보팀 루틴 전부 없애버림',
     tags: ['Python', 'GitHub Actions', 'Notion API', 'Naver API', 'Telegram Bot', 'Risk Check'],
     color: '#FFF7ED',
