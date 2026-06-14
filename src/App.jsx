@@ -2,6 +2,25 @@ import { useState, useEffect } from 'react'
 
 const apps = [
   {
+    id: 17,
+    emoji: '🐸',
+    title: '밈 유래 검색기',
+    year: '2026.06',
+    category: 'life',
+    animation: 'flow',
+    description: '인터넷 밈의 유래와 확산 맥락을 마케터 시각으로 빠르게 파악하는 검색 서비스. 나무위키 크롤링 + Claude AI 분석으로 한국·글로벌 밈 모두 커버.',
+    log: '밈 쓰기 전에 유래 모르면 망신당함. 그래서 만들었음',
+    tags: ['Next.js', 'Playwright', 'Claude Haiku', 'Serper API'],
+    color: '#FFFBEB',
+    url: null,
+    flow: [
+      { icon: '🔍', label: '밈\n검색' },
+      { icon: '📚', label: '나무위키\n크롤링' },
+      { icon: '🤖', label: 'Claude\n분석' },
+      { icon: '📋', label: '유래\n카드 출력' },
+    ],
+  },
+  {
     id: 16,
     emoji: '🗞️',
     title: '여론 동향 파악 자동화',
@@ -37,7 +56,7 @@ const apps = [
       '  ✓ EP.147  조회수 24,103',
       '[ Instagram API ]  @brand 수집',
       '  ✓ 릴스  좋아요 1,847',
-      '[ Instagram API ]  @minjaja.pdf 수집',
+      '[ Instagram API ]  @minday8910 수집',
       '  ✓ 릴스  좋아요 341',
       '[ Notion API ]  DB 업데이트',
       '  ✓ 4 pages synced ✓',
@@ -160,9 +179,9 @@ const apps = [
     title: '카드뉴스 자동화 시스템',
     year: '2026.02',
     category: 'life',
-    description: '밈 및 카드뉴스 제작을 위한 React 기반 웹 앱 · 이미지 배경 제거 및 압축 파일 처리 기능 포함',
+    description: 'AI 카피 생성부터 배경 제거까지 포함한 카드뉴스 메이커. 밈·일반 두 모드로 1080×1350px SNS 카드를 5단계로 제작.',
     log: '포토샵 켜는 게 피곤해서 만든 도구',
-    tags: ['React', 'Claude Code', 'Vercel'],
+    tags: ['React', 'Claude API', 'Zustand', 'Vercel'],
     color: '#F5F3FF',
     url: 'https://cardnews-app-pi.vercel.app/',
   },
@@ -488,13 +507,13 @@ export default function App() {
         </p>
 
         <div className="flex gap-3 flex-wrap">
-          <a href="https://www.instagram.com/minjaja.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/minday8910/" target="_blank" rel="noopener noreferrer"
             className="text-xs text-gray-500 hover:text-gray-900 transition-colors">
-            ↗ @minjaja.pdf
+            ↗ @minday8910
           </a>
-          <a href="https://www.instagram.com/min_jaja_" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/minday8910/" target="_blank" rel="noopener noreferrer"
             className="text-xs text-gray-500 hover:text-gray-900 transition-colors">
-            ↗ @min_jaja_
+            ↗ @minday8910
           </a>
           <a href="https://www.linkedin.com/in/minji-kim-a83113233/" target="_blank" rel="noopener noreferrer"
             className="text-xs text-gray-500 hover:text-gray-900 transition-colors">
