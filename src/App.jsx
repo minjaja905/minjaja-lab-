@@ -2,6 +2,25 @@ import { useState, useEffect } from 'react'
 
 const apps = [
   {
+    id: 18,
+    emoji: '📰',
+    title: '보도자료 작성 도우미',
+    year: '2026.06',
+    category: 'work',
+    animation: 'flow',
+    description: '홍보 담당자를 위한 보도자료 초안 자동화 툴. 8개 유형 선택 + 과거 사례 32개 DB 기반으로 Claude가 초안을 스트리밍 생성. 확정 후 docx 직접 다운로드.',
+    log: '매번 처음부터 쓰던 보도자료, AI한테 넘겨버림',
+    tags: ['Next.js', 'Claude API', 'TypeScript', 'Vercel'],
+    color: '#F0F9FF',
+    url: 'https://press-release-app-weld.vercel.app',
+    flow: [
+      { icon: '✍️', label: '육하원칙\n입력' },
+      { icon: '📂', label: '유형·사례\n선택' },
+      { icon: '🤖', label: 'Claude\n초안 생성' },
+      { icon: '📄', label: 'docx\n다운로드' },
+    ],
+  },
+  {
     id: 17,
     emoji: '🐸',
     title: '밈 유래 검색기',
